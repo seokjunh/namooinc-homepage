@@ -1,21 +1,44 @@
-import Image from "next/image";
-import Link from "next/link";
-
 const Footer = () => {
   return (
-    <footer className="bg-white px-4 py-8">
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col gap-8 md:flex-row md:justify-between">
-          {/* 좌측 영역 */}
+    <footer className="px-[5.625rem] py-[6.875rem]">
+      <div className="container max-w-6xl">
+        <div className="flex items-center text-lg">
+          <div className="mr-[6.25rem] text-4xl font-black">NAMOO I&C</div>
+          <div className="flex gap-[1.875rem]">
+            <div>이용약관</div>
+            <div>개인정보처리방침</div>
+            <div>이메일주소 무단수집 거부</div>
+          </div>
+        </div>
+        <div className="mb-[1.125rem] mt-16 flex gap-6 text-lg">
+          <div>서울특별시 강남구 도산대로30길 33-8 대경빌딩 3층</div>
+          <div className="flex">
+            <div className="mr-2 font-bold">대표이사</div>
+            <div>김경식</div>
+          </div>
+          <div className="flex">
+            <div className="mr-2 font-bold">TEL</div>
+            <div>02-3018-5114</div>
+          </div>
+          <div className="flex">
+            <div className="mr-2 font-bold">FAX</div>
+            <div>02-3018-5114</div>
+          </div>
+        </div>
+        <div className="text-lg">
+          © {new Date().getFullYear()} NAMOOI&C. All Rights Reserved.
+        </div>
+        {/* <div className="flex flex-col gap-8 md:flex-row md:justify-between">
+          
           <div className="space-y-4 text-center md:text-left">
             <div>대표이사 김경식</div>
             <div>사업자등록번호 211-87-61350</div>
             <div>주소 서울특별시 강남구 도산대로30길 33-8 대경빌딩 3층</div>
           </div>
 
-          {/* 우측 영역 */}
+          
           <div className="flex flex-col items-center gap-4 md:items-end">
-            {/* 링크 목록 */}
+            
             <div className="flex flex-col gap-2 md:flex-row md:gap-4">
               <Link
                 href="/terms"
@@ -37,7 +60,7 @@ const Footer = () => {
               </Link>
             </div>
 
-            {/* 로고 */}
+            
             <div className="flex items-center gap-2">
               <Image
                 src={"/images/namoo-icon.png"}
@@ -50,8 +73,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* 하단 영역 */}
         <div className="mt-8 flex flex-col border-t pt-4 md:flex-row md:items-center md:justify-between">
           <div className="text-center text-sm md:text-left">
             © {new Date().getFullYear()} 나무아이앤씨. All Rights Reserved.
@@ -80,7 +101,7 @@ const Footer = () => {
               className="h-24 w-24"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
