@@ -11,13 +11,13 @@ import "swiper/css/navigation";
 
 const sliderImages = [
   {
-    src: "/images/img1.jpg",
+    src: "/images/img3.png",
     alt: "CoreCode Image 1",
     title: "Connecting Value, CoreCode",
     description: "미래의 Digital 기술로 제조 산업의 경쟁력을 높입니다.",
   },
   {
-    src: "/images/img1.jpg",
+    src: "/images/img3.png",
     alt: "CoreCode Image 2",
     title: "Connecting Value, CoreCode",
     description: "미래의 Digital 기술로 제조 산업의 경쟁력을 높입니다.",
@@ -48,7 +48,7 @@ const CardSlider = () => {
         disableOnInteraction: false, // 사용자 상호작용 후 자동재생 유지
       }}
       speed={1300}
-      className="h-screen w-full [&_.custom-bullet]:h-3 [&_.custom-bullet]:w-3 [&_.custom-bullet]:rounded-full [&_.custom-bullet]:bg-white"
+      className="h-[50vh] w-full md:h-screen [&_.custom-bullet]:h-3 [&_.custom-bullet]:w-3 [&_.custom-bullet]:rounded-full [&_.custom-bullet]:bg-white"
       onResize={handleResize} // 크기 변경 이벤트 핸들러 추가
       resizeObserver={true} // 반응형 옵저버 활성화
     >
@@ -58,14 +58,17 @@ const CardSlider = () => {
             src={image.src}
             alt={image.alt}
             fill
-            className="max-w-[55rem] md:max-w-[120rem]"
+            priority={index === 0}
+            className="object-cover"
           />
-          <div className="absolute left-[20%] top-[40%] flex items-center">
+          <div className="absolute left-[15%] top-[40%] flex items-center">
             <div className="text-white">
               <h2 className="mb-4 text-4xl font-extrabold md:text-6xl lg:text-7xl">
                 {image.title}
               </h2>
-              <p className="text-lg md:text-xl">{image.description}</p>
+              <p className="text-sm md:text-base lg:text-xl">
+                {image.description}
+              </p>
             </div>
           </div>
         </SwiperSlide>

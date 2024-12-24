@@ -13,10 +13,11 @@ export const metadata: Metadata = {
   },
 };
 
-const nanoom = localFont({
-  src: "./fonts/NanumSquareRoundR.ttf",
-  display: "swap",
-});
+const pretendard = localFont({
+  src: './fonts/PretendardVariable.woff2',
+  display: 'swap',
+  weight: '45 920',
+})
 
 export default function RootLayout({
   children,
@@ -24,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={nanoom.className}>
+    <html lang="kr" className={`&{pretendard.variable}`}>
+      <body className={pretendard.className}>
         <Header />
         {children}
         <Footer />
