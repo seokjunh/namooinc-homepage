@@ -48,7 +48,7 @@ const CardSlider = () => {
         disableOnInteraction: false, // 사용자 상호작용 후 자동재생 유지
       }}
       speed={1300}
-      className="h-[50vh] w-full md:h-screen [&_.custom-bullet]:h-3 [&_.custom-bullet]:w-3 [&_.custom-bullet]:rounded-full [&_.custom-bullet]:bg-white"
+      className="h-[50vh] md:h-screen [&_.custom-bullet]:h-3 [&_.custom-bullet]:w-3 [&_.custom-bullet]:rounded-full [&_.custom-bullet]:bg-white"
       onResize={handleResize} // 크기 변경 이벤트 핸들러 추가
       resizeObserver={true} // 반응형 옵저버 활성화
     >

@@ -47,7 +47,7 @@ const navItems = [
 const DetailMenu = ({ onMouseEnter, onMouseLeave }: THeaderNav) => {
   return (
     <div
-      className="w-full bg-[#f5f5f5]"
+      className="bg-gray-100 w-full"
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >

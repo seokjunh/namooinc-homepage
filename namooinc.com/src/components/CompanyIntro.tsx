@@ -1,6 +1,6 @@
 const CompanyIntro = () => {
   return (
-    <div className="w-full px-4 py-8 md:px-[28.125rem] md:py-16">
+    <div className="w-full px-4 py-8 lg:px-[28.125rem] md:py-16">
       <div className="mb-8 text-3xl font-black md:mb-16 md:text-5xl lg:text-6xl">
         About
         <br />

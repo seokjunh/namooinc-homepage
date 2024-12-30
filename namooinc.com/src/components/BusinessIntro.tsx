@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BusinessIntro = () => {
   return (
-    <div className="w-full px-4 py-8 md:px-[28.125rem] md:py-16">
+    <div className="w-full px-4 py-8 lg:px-[28.125rem] md:py-16">
       <div className="mb-[3.125rem] text-3xl font-black lg:text-6xl">
         Business
       </div>
