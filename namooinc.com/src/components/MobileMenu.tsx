@@ -18,34 +18,34 @@ const MobileMenu = () => {
 
       {isMobileMenuOpen && (
         <div className="absolute top-full w-full bg-white text-black shadow-xl md:hidden">
-          <div className="flex flex-col items-center space-y-4 py-6 font-bold">
+          <div className="flex flex-col items-center space-y-4 py-6 font-bold text-lg">
             <Link
-              href="/corecode"
+              href="/company"
               className="underline-offset-4 hover:text-[#78b237] hover:underline"
               onClick={toggleMobileMenu}
             >
-              CORECODE
+              회사소개
             </Link>
             <Link
               href="/solution"
               className="underline-offset-4 hover:text-[#78b237] hover:underline"
               onClick={toggleMobileMenu}
             >
-              SOLUTION
-            </Link>
-            <Link
-              href="/aboutus"
-              className="underline-offset-4 hover:text-[#78b237] hover:underline"
-              onClick={toggleMobileMenu}
-            >
-              ABOUT US
+              솔루션
             </Link>
             <Link
               href="/support"
               className="underline-offset-4 hover:text-[#78b237] hover:underline"
               onClick={toggleMobileMenu}
             >
-              SUPPORT
+              고객지원
+            </Link>
+            <Link
+              href="/recruit"
+              className="underline-offset-4 hover:text-[#78b237] hover:underline"
+              onClick={toggleMobileMenu}
+            >
+              인재영입
             </Link>
           </div>
         </div>

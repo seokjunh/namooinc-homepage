@@ -6,12 +6,12 @@ const HeaderLogo = () => {
     <Link href={"/"}>
       <Image
         src={"/images/namoo-logo.png"}
-        width={100}
-        height={10}
+        width={200}
+        height={200}
         alt="logo"
-        className="h-[2rem] w-[8rem]"
+        className="h-[2rem] w-[8rem] xl:h-[3rem] xl:w-[11rem]"
       />
-      <div className="text-sm text-[#78b237]">Conneting Value</div>
+      <div className="text-[0.55rem] text-[#78b237] xl:text-xs">Conneting Value</div>
     </Link>
   );
 };

@@ -1,6 +1,6 @@
 const CompanyIntro = () => {
   return (
-    <div className="w-full px-4 py-8 lg:px-[28.125rem] md:py-16">
+    <div className="w-full px-4 py-8 md:py-16 lg:px-[23rem] xl:px-[27.7rem]">
       <div className="mb-8 text-3xl font-black md:mb-16 md:text-5xl lg:text-6xl">
         About
         <br />
@@ -11,7 +11,7 @@ const CompanyIntro = () => {
         <div className="break-keep">
           고객의 가치를 서로 연계하여 더 큰 가치를 만드는
         </div>
-        <div className="flex">
+        <div className="flex flex-wrap">
           <span className="text-[#78b237]">스마트팩토리 솔루션 전문기업</span>
           <span>입니다.</span>
         </div>

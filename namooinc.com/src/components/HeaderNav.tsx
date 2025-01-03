@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type THeaderNav = {
   onMouseEnter: () => void;
 };
@@ -7,33 +5,21 @@ type THeaderNav = {
 const HeaderNav = ({ onMouseEnter }: THeaderNav) => {
   return (
     <div
-      className="hidden space-x-[4rem] font-pretendard font-semibold md:flex"
+      className="hidden space-x-[4rem] font-pretendard text-xl font-semibold md:flex"
       onMouseEnter={onMouseEnter}
     >
-      <Link
-        href={"/corecode"}
-        className="underline-offset-4 hover:text-[#78b237] hover:underline"
-      >
-        CORECODE
-      </Link>
-      <Link
-        href={"/solution"}
-        className="underline-offset-4 hover:text-[#78b237] hover:underline"
-      >
-        SOLUTION
-      </Link>
-      <Link
-        href={"/aboutus"}
-        className="underline-offset-4 hover:text-[#78b237] hover:underline"
-      >
-        ABOUT US
-      </Link>
-      <Link
-        href={"/support"}
-        className="underline-offset-4 hover:text-[#78b237] hover:underline"
-      >
-        SUPPORT
-      </Link>
+      <div className="cursor-default hover:text-[#78b237] hover:underline hover:decoration-4 hover:underline-offset-[2.5rem]">
+        회사소개
+      </div>
+      <div className="cursor-default hover:text-[#78b237] hover:underline hover:decoration-4 hover:underline-offset-[2.5rem]">
+        솔루션
+      </div>
+      <div className="cursor-default hover:text-[#78b237] hover:underline hover:decoration-4 hover:underline-offset-[2.5rem]">
+        고객지원
+      </div>
+      <div className="cursor-default hover:text-[#78b237] hover:underline hover:decoration-4 hover:underline-offset-[2.5rem]">
+        인재채용
+      </div>
     </div>
   );
 };

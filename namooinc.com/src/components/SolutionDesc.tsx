@@ -10,6 +10,7 @@ import SolutionNavbar from "./SolutionNavbar";
 
 const SolutionDesc = () => {
   const scrollRef = useRef<HTMLDivElement[]>([]);
+  
   const setRef = (index: number) => (el: HTMLDivElement | null) => {
     if (el) {
       scrollRef.current[index] = el;
@@ -17,7 +18,7 @@ const SolutionDesc = () => {
   };
   return (
     <>
-      <SolutionNavbar scrollRefs={scrollRef} />
+      <SolutionNavbar scrollRef={scrollRef} />
       <div className="grid place-items-center gap-y-20 py-[7.5rem] md:px-[11.25rem] lg:px-[22.5rem] px-10">
         <div ref={setRef(0)} className="scroll-mt-44">
           <CoreCodeConcept />

@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 
 const SolutionNavbar = ({
-  scrollRefs,
+  scrollRef,
 }: {
-  scrollRefs: React.RefObject<HTMLDivElement[]>;
+  scrollRef: React.RefObject<HTMLDivElement[]>;
 }) => {
   const [activeTab, setActiveTab] = useState(0);
   const [isFixed, setIsFixed] = useState(false);
@@ -29,9 +29,10 @@ const SolutionNavbar = ({
 
   const handleMenuItemClick = (index: number) => {
     setActiveTab(index);
-    if (scrollRefs.current && scrollRefs.current[index]) {
-      scrollRefs.current[index].scrollIntoView({
-        behavior: "smooth", // 부드러운 스크롤
+    
+    if (scrollRef.current && scrollRef.current[index]) {
+      scrollRef.current[index].scrollIntoView({
+        behavior: "smooth",
       });
     }
   };

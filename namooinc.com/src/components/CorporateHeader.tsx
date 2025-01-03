@@ -1,38 +1,20 @@
 "use client";
 
-import MobileMenu from "./MobileMenu";
+import { useState } from "react";
+import DetailMenu from "./DetailMenu";
 import HeaderLogo from "./HeaderLogo";
 import HeaderNav from "./HeaderNav";
-import { useEffect, useState } from "react";
-import DetailMenu from "./DetailMenu";
+import MobileMenu from "./MobileMenu";
 
-const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+const CorporateHeader = () => {
   const [showDetailMenu, setShowDetailMenu] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const handleMouseEnter = () => setShowDetailMenu(true);
   const handleMouseLeave = () => setShowDetailMenu(false);
 
   return (
-    <>
-      <div
-        className={`fixed z-10 flex h-[6.25rem] w-full items-center justify-around ${
-          isScrolled || showDetailMenu
-            ? "bg-white"
-            : "bg-transparent text-white"
-        }`}
-      >
+    <div>
+      <div className="fixed z-10 flex h-[6.25rem] w-full items-center justify-around">
         <HeaderLogo />
         <HeaderNav onMouseEnter={handleMouseEnter} />
         <MobileMenu />
@@ -48,8 +30,7 @@ const Header = () => {
           onMouseLeave={handleMouseLeave}
         />
       </div>
-    </>
+    </div>
   );
 };
-
-export default Header;
+export default CorporateHeader;
